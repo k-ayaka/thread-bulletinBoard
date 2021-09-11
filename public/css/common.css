@@ -1,0 +1,114 @@
+/* =================== 会員登録画面 ここから =================== */
+
+.content {
+  background-color: #ddeaf6;
+  text-align: center;
+  border: 1px solid black;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.form {
+  display: inline-block;
+  text-align: left;
+  padding: 50px;
+}
+
+.form h1 {
+  font-size: 25px;
+  margin: 10px 0 25px 0;
+  text-align: center;
+}
+
+
+/* 氏名 */
+.form__name {
+  margin-bottom: 50px;
+}
+/* // 氏名 // */
+
+
+/* 性別 */
+.form__gender {
+  margin: 20px 0 30px 0;
+}
+
+.gender {
+  margin-right: 30px;
+}
+/* // 性別 // */
+
+
+
+/* 住所 */
+.form__address {
+  display: flex;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.address {
+  margin-right: 20px;
+}
+
+.prefecture {
+  margin-bottom: 15px;
+}
+.prefecture span {
+  margin-right: 49px;
+}
+
+.address-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-input input {
+  width: 300px;
+}
+/* // 住所 // */
+
+
+
+/* パスワード */
+.form__password, .form__password-confirmation, .form__email {
+  margin-bottom: 20px;
+}
+
+.form__password input, .form__password-confirmation input, .form__email input {
+  width: 300px;
+}
+
+.form__password span {
+  margin-right: 84px;
+}
+.form__password-confirmation span {
+  margin-right: 52px;
+}
+.form__email span {
+  margin-right: 54px;
+}
+/* // パスワード // */
+
+
+/* ボタン */
+
+.form__btn {
+  background-color: #4472c4;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid #3c66af;
+  text-align: center;
+  max-width: 25%;
+  margin: 0 auto;
+}
+
+.btn {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+/* // ボタン // */
+
+/* =================== 会員登録画面 ここまで =================== */
