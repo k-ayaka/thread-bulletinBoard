@@ -6,15 +6,15 @@
   border: 1px solid black;
   max-width: 50%;
   margin: 0 auto;
+  padding: 50px;
 }
 
 .form {
   display: inline-block;
   text-align: left;
-  padding: 50px;
 }
 
-.form h1 {
+h1 {
   font-size: 25px;
   margin: 10px 0 25px 0;
   text-align: center;
@@ -41,7 +41,7 @@
 
 
 /* 住所 */
-.form__address {
+.input {
   display: flex;
   margin-right: 20px;
   margin-bottom: 30px;
@@ -79,36 +79,58 @@
   width: 300px;
 }
 
-.form__password span {
+.form__password label {
   margin-right: 84px;
 }
-.form__password-confirmation span {
+.form__password-confirmation label {
   margin-right: 52px;
 }
-.form__email span {
+.form__email label {
   margin-right: 54px;
 }
 /* // パスワード // */
 
 
 /* ボタン */
-
 .form__btn {
   background-color: #4472c4;
   padding: 10px 20px;
   font-weight: 600;
   border-radius: 5px;
   border: 1px solid #3c66af;
-  text-align: center;
-  max-width: 25%;
   margin: 0 auto;
+  color: white;
+  cursor: pointer;
+  display: block;
 }
 
-.btn {
-  color: white;
-  display: block;
+.form__btn.return {
+  background-color: white;
+  color: #4472c4;
+  margin-top: 30px;
+}
+
+a {
   text-decoration: none;
 }
 /* // ボタン // */
 
 /* =================== 会員登録画面 ここまで =================== */
+
+
+
+/* =================== 会員登録確認画面 ここから =================== */
+
+table {
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 15px;
+}
+
+.form__address tr{
+  display: none;
+}
+
+/* =================== 会員登録確認画面 ここまで =================== */
