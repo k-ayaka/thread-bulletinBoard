@@ -1,25 +1,6 @@
 <?php 
   error_reporting(E_ALL & ~E_NOTICE);
-  session_start();
-
-  // セッションの内容が含まれているか判定
-  if(!isset($_SESSION['confirm'])) {
-    // セッションの内容が正しくなければ、入力画面へ遷移
-    header('Location: member_regist.php');
-    exit;
-  }
-
-  // POSTされたデータを変数に代入
-  $name_sei = htmlspecialchars($_SESSION['confirm']['name_sei'], ENT_QUOTES);
-  $name_mei = htmlspecialchars($_SESSION['confirm']['name_mei'], ENT_QUOTES);
-  $gender = $_SESSION['confirm']['gender'];
-  $pref_name = $_SESSION['confirm']['pref_name'];
-  $address = $_SESSION['confirm']['address'];
-  $email = htmlspecialchars($_SESSION['confirm']['email'], ENT_QUOTES);
-
-
-  // 取得した値を整形
-  $name = $name_sei . '　' . $name_mei;
+  require './models/confirm.php';
 
 ?>
 
@@ -39,6 +20,7 @@
     <div class="content">
         <h1>会員情報確認画面</h1>
         <form class="form" action="" method="post">
+          <input type="hidden" name="action" value="submit" />
           <table>
             <tr class="form__name">
               <td>氏名</td>
@@ -47,7 +29,15 @@
     
             <tr class="form__gender">
               <td class="gender">性別</td>
-              <td> <?php echo $gender; ?> </td>
+              <td> 
+                <?php
+                if($gender === "1") {
+                  echo '男性';
+                } elseif($gender === "2") {
+                  echo '女性';
+                }
+                ?>
+              </td>
             </tr>
     
             <tr class="form__address">
@@ -66,7 +56,7 @@
             </tr>
           </table>
     
-            <form action="complete.php" method="post">
+            <form action="./models/confirm.php" method="post">
               <button type="submit" class="form__btn">
                       登録完了
               </button>
