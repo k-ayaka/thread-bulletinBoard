@@ -131,4 +131,20 @@
   }
 
 
+  /**
+   * @都道府県チェック
+   * @param $errors
+   * @param $check_value
+   * @param $message
+   */
+  function prefCheck(&$errors, $check_value, $message) {
+    // 都道府県リストを読み込み
+    include 'partials/prefectures.php';
+    // 入力値が都道府県リストに含まれているか判定
+    $result = in_array($check_value, $prefectures, TRUE);
+    if(!$result) {
+      array_push($errors, $message);
+    }
+  }
+
 ?>

@@ -74,6 +74,9 @@ if(!empty($_POST)) {
         // メールアドレス重複チェック
         emailAddressDuplicateCheck($_SESSION['email_errors'], $email, "※すでに登録されているメールアドレスです");
 
+        // 都道府県チェック
+        prefCheck($_SESSION['pref_name_errors'], $pref_name, "※都道府県の入力値が正しくありません");
+
       }
 
       // 入力項目にエラーがない場合、次の画面へ遷移できる
