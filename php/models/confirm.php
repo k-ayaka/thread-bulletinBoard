@@ -8,7 +8,7 @@
     header('Location: member_regist.php');
     exit;
   }
-  
+
 
   // POSTされたデータを変数に代入
   $name_sei = $_SESSION['confirm']['name_sei'];
@@ -17,6 +17,7 @@
   $pref_name = $_SESSION['confirm']['pref_name'];
   $address = $_SESSION['confirm']['address'];
   $email = $_SESSION['confirm']['email'];
+  $password = $_SESSION['confirm']['password'];
 
   // 取得した値を整形
   $name = $name_sei . '　' . $name_mei;
@@ -35,17 +36,17 @@
           '))
           {
             // パスワードのハッシュ値を設定
-            $password = password_hash($user_password, PASSWORD_DEFAULT);
+            $user_password = password_hash($password, PASSWORD_DEFAULT);
             // 性別の番号を数値に変換
             $gender = intval($gender);
-  
+
             // bindParamでそれぞれのカラムに、取得した値をバインドする。
             $statement->bindParam(':name_sei', htmlspecialchars($name_sei));
             $statement->bindParam(':name_mei', htmlspecialchars($name_mei));
             $statement->bindParam(':gender', $gender);
             $statement->bindParam(':pref_name', $pref_name);
             $statement->bindParam(':address', htmlspecialchars($address));
-            $statement->bindParam(':password', $password);
+            $statement->bindParam(':password', $user_password);
             $statement->bindParam(':email', $email);
             $statement->execute();
 
