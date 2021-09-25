@@ -13,6 +13,12 @@
     <div class="content">
         <h1>会員登録完了</h1>
           <p>会員登録が完了しました。</p>
+          
+          <a href="top.php">
+            <button type="submit" class="form__btn complete">
+                    トップに戻る
+            </button>
+          </a>
       </div>
 </div>
 </body>

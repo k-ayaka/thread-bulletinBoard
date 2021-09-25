@@ -118,6 +118,12 @@
                 確認画面へ
         </button>
       </form>
+      
+      <a href="top.php">
+        <button type="submit" class="form__btn return">
+                トップに戻る
+        </button>
+      </a>
 
     </div>
   </div>

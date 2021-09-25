@@ -15,6 +15,20 @@
     }
   }
 
+
+  /**
+   * @ログイン入力チェック
+   * @param $errors
+   * @param $user_email
+   * @param $user_password
+   * @param $message
+   */
+  function loginEmptyCheck(&$errors, $user_email, $user_password, $message) {
+    if(empty(trim($user_email)) || empty(trim($user_password))) {
+      array_push($errors, $message);
+    }
+  }
+
   /**
    * @「パスワード」と「パスワード確認」の入力が一致しているか
    * @param $password
