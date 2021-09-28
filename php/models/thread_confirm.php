@@ -40,8 +40,7 @@
                 // セッションデータを削除
                 unset($_SESSION['thread_confirm']);
 
-                // 投稿ができたらトップ画面へ遷移
-                header('Location: top.php');
+                header('Location: thread.php');
                 exit;
             }
 
