@@ -21,9 +21,12 @@
             <?php if(isLogin()): ?>
               <div class="header__logout">
                 <p>ようこそ<?php echo $name ?>様</p>
-                <form action="./models/logout.php" method="post">
-                  <button class="logout__btn"><li class="header__li">ログアウト</li></button>
-                </form>
+                <div class="header__right">
+                  <a href="thread_regist.php"><li class="header__li">新規スレッド作成</li></a>
+                  <form action="./models/logout.php" method="post">
+                    <button class="logout__btn"><li class="header__li">ログアウト</li></button>
+                  </form>
+                </div>
               </div>
             <?php else: ?>
               <div class="header__login">
