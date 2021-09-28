@@ -31,12 +31,12 @@
 
   /**
    * @ログインしているユーザーのIDを取得
-   * @return string | null
+   * @return int | null
    */
   function getUserId() {
     if(isset($_SESSION['user'])) {
       $id = $_SESSION['user']['id'];
-      return $id;
+      return intval($id);
     }
     return null;
   }

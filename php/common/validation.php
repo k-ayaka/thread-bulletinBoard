@@ -96,6 +96,20 @@
     }
   }
 
+  
+  /**
+   * @最大文字数チェック
+   * @500文字以内
+   * @param $errors
+   * @param $check_value
+   * @param $message
+   */
+  function maxSizeCheck_500(&$errors, $check_value, $message) {
+    if(mb_strlen($check_value) > 500 ) {
+      array_push($errors, $message);
+    }
+  }
+
 
   /**
    * @メールアドレス形式チェック
