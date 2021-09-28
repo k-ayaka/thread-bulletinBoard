@@ -22,6 +22,7 @@
               <div class="header__logout">
                 <p>ようこそ<?php echo $name ?>様</p>
                 <div class="header__right">
+                  <a href="thread.php"><li class="header__li">スレッド一覧</li></a>
                   <a href="thread_regist.php"><li class="header__li">新規スレッド作成</li></a>
                   <form action="./models/logout.php" method="post">
                     <button class="logout__btn"><li class="header__li">ログアウト</li></button>
@@ -30,6 +31,7 @@
               </div>
             <?php else: ?>
               <div class="header__login">
+                <a href="thread.php"><li class="header__li">スレッド一覧</li></a>
                 <a href="member_regist.php"><li class="header__li">新規会員登録</li></a>
                 <a href="login.php"><li class="header__li">ログイン</li></a>
               </div>
