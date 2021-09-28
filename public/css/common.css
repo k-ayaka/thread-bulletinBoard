@@ -7,6 +7,10 @@
   padding: 0 0 15px 15px;
 }
 
+.error.thread {
+  padding-left: 15px;
+}
+
 body {
   background-color: #ddeaf6;
 }
@@ -36,6 +40,10 @@ header .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__right {
+  display: flex;
 }
 
 .header__login {
@@ -173,7 +181,7 @@ h1 {
   color: white;
   cursor: pointer;
   display: block;
-  width: 180px;
+  width: 190px;
 }
 
 .form__btn.return {
@@ -208,3 +216,18 @@ td {
 }
 
 /* =================== 会員登録確認画面 ここまで =================== */
+
+
+
+/* =================== スレッド作成画面 ここから =================== */
+
+.title_input {
+  width: 400px;
+}
+
+.content_text {
+  width: 400px;
+  height: 200px;
+}
+
+/* =================== スレッド作成画面 ここまで =================== */
