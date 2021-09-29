@@ -44,6 +44,7 @@ header .header__nav {
 
 .header__right {
   display: flex;
+  justify-content: flex-end;
 }
 
 .header__login {
@@ -195,6 +196,14 @@ h1 {
   width: 180px;
   margin: 0 auto;
 }
+
+.search__btn {
+  border: 1px solid black;
+  background-color: white;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
 /* // ボタン // */
 
 /* =================== 会員登録画面 ここまで =================== */
@@ -231,3 +240,18 @@ td {
 }
 
 /* =================== スレッド作成画面 ここまで =================== */
+
+
+
+/* =================== スレッド一覧 ここから =================== */
+
+.search_input {
+  width: 400px;
+  padding: 10px;
+}
+
+/* =================== スレッド一覧 ここから =================== */
+
+.search {
+  margin-top: 30px;
+}

@@ -56,9 +56,9 @@
             </button>
           </form>
 
-          <a href="top.php">
+          <a href="thread.php">
             <button type="submit" class="form__btn return">
-                    トップに戻る
+                    一覧に戻る
             </button>
           </a>
         </div>
