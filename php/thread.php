@@ -34,13 +34,15 @@
               スレッド検索
             </button>
           </div>
-          <?php foreach($results as $result): ?>
-              <p class='search'>
-                ID: <?php echo $result['id']; ?>　
-                <?php echo $result['title']; ?>　
-                <?php echo $result['created_at']; ?>　
-              </p>
-          <?php endforeach; ?>
+          <table>
+              <?php foreach($results as $result): ?>
+                  <tr class='search'>
+                    <th>ID: <?php echo $result['id']; ?></th>
+                    <th><a href="thread_detail.php?id=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></th>
+                    <th><?php echo date('Y.m.d H:i', strtotime($result['created_at'])); ?></th>
+                  </tr>
+              <?php endforeach; ?>
+          </table>
       </form>
           <a href="top.php">
             <button type="submit" class="form__btn return">
