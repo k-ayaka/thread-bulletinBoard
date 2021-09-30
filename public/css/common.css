@@ -250,8 +250,75 @@ td {
   padding: 10px;
 }
 
-/* =================== スレッド一覧 ここから =================== */
+/* =================== スレッド一覧 ここまで =================== */
 
-.search {
+table {
   margin-top: 30px;
+}
+
+th {
+  font-weight: normal;
+  padding: 10px;
+}
+
+
+
+/* =================== スレッド詳細 ここから =================== */
+.thread__title {
+  margin: 20px 0;
+}
+
+.thread__title > h1 {
+  margin: 0;
+}
+
+.thread__title > div {
+  display: inline-block;
+  margin-right: -15%;
+}
+
+
+.thread {
+  background-color: #ddeaf6;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.thread__content {
+  border-top: 50px solid #d8d8d8;
+  border-bottom: 50px solid #d8d8d8;
+}
+
+
+.content__inner {
+  color: #3a65e7;
+  border: 2px solid #3a65e7;
+  border-radius: 10px;
+  margin: 20px auto;
+  text-align: left;
+  padding: 0 20px 20px 20px;
+  max-width: 60%;
+}
+
+.content-text {
+  margin-top: 5px;
+}
+
+.comment__input {
+  margin: 20px;
+  width: 60%;
+  height: 300px;
+}
+
+.comment__btn{
+  background-color: #4472c4;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid #3c66af;
+  margin-left: 67%;
+  color: white;
+  cursor: pointer;
+  display: block;
+  width: 190px;
 }
